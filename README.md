@@ -3,6 +3,7 @@
 ![downloads](https://img.shields.io/npm/dw/tiny-ok-message)
 ![license](https://img.shields.io/npm/l/tiny-ok-message)
 ![Security Policy](https://img.shields.io/badge/security-policy-brightgreen)
+![npm_provenance](https://img.shields.io/badge/npm-provenance-brightgreen?logo=npm)
 ![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/tiny-ok-message)
 
 # tiny-ok-message
