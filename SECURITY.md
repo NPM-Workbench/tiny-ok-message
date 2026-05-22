@@ -46,19 +46,6 @@ Recommended practices:
 - review network behavior when using the package in sensitive applications;
 - keep the package updated when fixes or improvements are released.
 
-**Dependency and Supply Chain Notes**<br/>
-
-Maintainers and contributors should make reasonable efforts to protect the integrity of the package and its releases.
-
-Maintainer expectations:
-
-- keep dependencies reasonably current;
-- review dependency changes before publishing;
-- avoid adding telemetry, tracking, hidden network calls, or storage behavior without clear documentation and review;
-- run relevant tests and build checks before release;
-- publish releases from trusted maintainer environments;
-- avoid including secrets, tokens, private keys, or credentials in source code, tests, examples, or published packages.
-
 **Reporting a Vulnerability**<br/>
 
 If you discover a vulnerability, privacy issue, malicious behavior, dependency risk, or other security concern, please report it responsibly.<br/>
