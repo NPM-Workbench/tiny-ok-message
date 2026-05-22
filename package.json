@@ -27,6 +27,7 @@
   "scripts": {
     "build": "tsc",
     "clean": "rm -rf -v ./coverage ./dist",
+    "publish:check": "npm view tiny-ok-message version",
     "prepublishOnly": "npm run build",
     "test": "jest",
     "test:watch": "jest --watch",
