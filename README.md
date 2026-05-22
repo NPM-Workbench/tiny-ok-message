@@ -5,8 +5,7 @@
 ![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/tiny-ok-message)
 
 # tiny-ok-message
-
-An intentionally small, fetch-based package that is useful for quick API-client experiments, demos, package publishing tests, and provenance/trusted publishing checks.
+An intentionally small, fetch-based package that is useful for quick API-client experiments.
 
 ### 📦 Installation
 
