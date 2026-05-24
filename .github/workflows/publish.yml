@@ -1,7 +1,5 @@
 name: Publish Package
-
-on:
-  workflow_dispatch:
+on: workflow_dispatch
 
 permissions:
   contents: read
@@ -10,8 +8,10 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
-
     steps:
+      - name: Start Message
+        run: echo "<<--- [Start Package Publish] --->>"
+      
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -36,3 +36,6 @@ jobs:
 
       - name: Publish to npm
         run: npm publish
+        
+      - name: End Message
+        run: echo "<<--- [End Package Publish] --->>"
