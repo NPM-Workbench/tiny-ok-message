@@ -7,6 +7,7 @@
 ![NPM Unpacked Size](https://img.shields.io/npm/unpacked-size/tiny-ok-message)
 
 # tiny-ok-message
+
 ⚗️ An intentionally small, fetch-based package that is useful for quick API-client experiments. Experimental Package: primarily used for learning purposes.
 
 ### 📦 Installation
@@ -24,16 +25,17 @@ npm install tiny-ok-message
 5. TypeScript ready with generated declaration files
 6. ESM package output through `dist`
 7. Unit tested with Jest and `ts-jest`
+8. Github Actions are used for performing trusted publish
 
 ### 🔤 Example Usage
 
 ```ts
 /* node modules */
-import { getOkMessage } from 'tiny-ok-message';
+import { getOkMessage } from "tiny-ok-message";
 
 /* example */
 async function run() {
-  const response = await getOkMessage({ message: 'hello world' });
+  const response = await getOkMessage({ message: "hello world" });
   console.log(response);
 }
 await run();

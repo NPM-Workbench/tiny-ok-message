@@ -3,9 +3,8 @@ name: Publish Package
 
 # how this workflow will be triggered
 on:
-  push:
-    branches:
-      - "master"
+  release:
+    types: [published]
 
 permissions:
   contents: read
