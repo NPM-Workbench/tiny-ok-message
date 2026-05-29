@@ -1,7 +1,5 @@
-# name of the workflow
 name: Publish Package
 
-# how the workflow will be triggered
 on: workflow_dispatch
 
 permissions:
