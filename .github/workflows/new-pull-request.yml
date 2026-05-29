@@ -1,5 +1,5 @@
 # workflow: name
-name: On New PR: Run Unit Tests
+name: On New PR_Run Unit Tests
 
 # the trigger
 on:
