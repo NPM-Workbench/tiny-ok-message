@@ -2,7 +2,10 @@
 name: Publish Package
 
 # how this workflow will be triggered
-on: workflow_dispatch
+on:
+  push:
+    branches:
+      - "master"
 
 permissions:
   contents: read
@@ -10,9 +13,6 @@ permissions:
 
 jobs:
   publish:
-    # only run if workflow was triggered on master branch
-    if: ${{ github.ref == 'refs/heads/master' }}
-
     # vm instance
     runs-on: ubuntu-latest
 
@@ -20,6 +20,10 @@ jobs:
     steps:
       - name: Start Message
         run: echo "[Start Package Publish]:"
+
+      # context object - emit
+      - name: Github Context
+        run: echo '${{ toJson(github) }}'
 
       - name: Checkout repository
         uses: actions/checkout@v4
