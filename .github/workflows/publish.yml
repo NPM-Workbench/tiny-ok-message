@@ -1,5 +1,7 @@
+# name of the workflow
 name: Publish Package
 
+# how this workflow will be triggered
 on: workflow_dispatch
 
 permissions:
@@ -9,7 +11,7 @@ permissions:
 jobs:
   publish:
     # only run if workflow was triggered on master branch
-    if: github.ref == "refs/heads/master"
+    if: ${{ github.ref == 'refs/heads/master' }}
 
     # vm instance
     runs-on: ubuntu-latest
