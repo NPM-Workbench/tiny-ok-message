@@ -18,7 +18,7 @@ jobs:
     # various tasks
     steps:
       - name: Start Message
-        run: echo "On New PR: Run Unit Tests - Started"
+        run: echo "On New PR Run Unit Tests - Started"
 
       - name: Github Context
         run: |
