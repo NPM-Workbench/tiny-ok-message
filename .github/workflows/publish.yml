@@ -89,6 +89,12 @@ jobs:
       - name: Publish to npm
         run: npm publish
 
+      - name: Pack NPM Package
+        run: npm Pack
+
+      - name: Check Directory
+        run: ls -la
+
       - name: Upload Publish Artifact
         uses: actions/upload-artifact@v4
         with:
