@@ -90,7 +90,7 @@ jobs:
         run: npm publish
 
       - name: Pack NPM Package
-        run: npm Pack
+        run: npm pack
 
       - name: Check Directory
         run: ls -la
