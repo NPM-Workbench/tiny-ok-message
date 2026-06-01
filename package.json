@@ -11,7 +11,7 @@
     "utility"
   ],
   "license": "MIT",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -49,6 +49,7 @@
   },
   "homepage": "https://github.com/NPM-Workbench/tiny-ok-message#readme",
   "dependencies": {
+    "playwright": "^1.60.0",
     "puppeteer": "^25.1.0"
   }
 }
