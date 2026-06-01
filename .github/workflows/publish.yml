@@ -11,14 +11,50 @@ permissions:
   id-token: write
 
 jobs:
+  test-package:
+    #vm instance
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start Test
+        run: echo "Start Package Test"
+
+        # context object - emit
+      - name: Github Context
+        run: echo '${{ toJson(github) }}'
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+          package-manager-cache: false
+
+      - name: Check npm version
+        run: npm --version
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run tests
+        run: npm test -- --runInBand
+
+      - name: End Message
+        run: echo "End Package Test"
+
   publish:
+    needs: test-package
+
     # vm instance
     runs-on: ubuntu-latest
 
     # various tasks that would be executed
     steps:
       - name: Start Message
-        run: echo "[Start Package Publish]:"
+        run: echo "Start Package Publish"
 
       # context object - emit
       - name: Github Context
@@ -40,9 +76,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run tests
-        run: npm test -- --runInBand
-
       - name: Build package
         run: npm run build
 
@@ -50,4 +83,4 @@ jobs:
         run: npm publish
 
       - name: End Message
-        run: echo "[End Package Publish]:"
+        run: echo "End Package Publish"
